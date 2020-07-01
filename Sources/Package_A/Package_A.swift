@@ -1,13 +1,13 @@
 import Foundation
 
-protocol PackageProtocol {
+public protocol PackageProtocol {
     var text: String { get }
     var indent: Int { get }
 }
 
-struct Package_A: PackageProtocol {
-    let indent: Int
-    let text: String
+public struct Package_A: PackageProtocol {
+    public let indent: Int
+    public let text: String
     init(indent inIndent: Int = 0) {
         indent = inIndent
         let prefix = String(repeating: "\t", count: inIndent)
